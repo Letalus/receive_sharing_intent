@@ -5,6 +5,7 @@ enum SharedMediaType: String, Codable, CaseIterable {
     case text, url, image, video, gpx
 
     var toUTTypeIdentifier: String {
+        print("toUTTypeIdentifier: ", self)
         switch self {
         case .text:
             return kUTTypeText as String
@@ -27,4 +28,14 @@ struct SharedMediaFile: Codable {
     let thumbnail: String?
     let duration: Double?
     let type: SharedMediaType
+    
+    // Custom initializer
+        init(path: String, mimeType: String?, thumbnail: String?, duration: Double?, type: SharedMediaType) {
+            self.path = path
+            self.mimeType = mimeType
+            self.thumbnail = thumbnail
+            self.duration = duration
+            self.type = type
+            print("type now: ", type)
+        }
 }

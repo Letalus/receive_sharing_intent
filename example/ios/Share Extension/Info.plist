@@ -25,6 +25,7 @@
 			<array>
 				<string>Video</string>
 				<string>Image</string>
+				<string>org.gpx+xml</string>
 			</array>
 		</dict>
 		<key>NSExtensionMainStoryboard</key>
