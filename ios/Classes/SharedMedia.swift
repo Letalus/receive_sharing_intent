@@ -18,6 +18,7 @@ enum SharedMediaType: String, Codable, CaseIterable {
             return "org.gpx+xml"
         }
     }
+
 }
 
 struct SharedMediaFile: Codable {
